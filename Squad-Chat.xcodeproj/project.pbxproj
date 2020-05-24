@@ -16,7 +16,7 @@
 		B42A0333247AD2EA0007E0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42A0331247AD2EA0007E0DF /* LaunchScreen.storyboard */; };
 		B42A0340247AE5650007E0DF /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A033F247AE5650007E0DF /* RegisterScreen.swift */; };
 		B42A0342247AF3120007E0DF /* TextField1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0341247AF3120007E0DF /* TextField1.swift */; };
-		B42A0344247AF4EF0007E0DF /* ButtonView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0343247AF4EF0007E0DF /* ButtonView1.swift */; };
+		B42A0346247B29D00007E0DF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0345247B29D00007E0DF /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		B42A0334247AD2EA0007E0DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42A033F247AE5650007E0DF /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B42A0341247AF3120007E0DF /* TextField1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField1.swift; sourceTree = "<group>"; };
-		B42A0343247AF4EF0007E0DF /* ButtonView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView1.swift; sourceTree = "<group>"; };
+		B42A0345247B29D00007E0DF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +110,8 @@
 			children = (
 				B42A032A247AD2E90007E0DF /* LandingScreen.swift */,
 				B42A033F247AE5650007E0DF /* RegisterScreen.swift */,
+				B42A0345247B29D00007E0DF /* LoginView.swift */,
 				B42A0341247AF3120007E0DF /* TextField1.swift */,
-				B42A0343247AF4EF0007E0DF /* ButtonView1.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,11 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42A0346247B29D00007E0DF /* LoginView.swift in Sources */,
 				B42A0340247AE5650007E0DF /* RegisterScreen.swift in Sources */,
 				B42A0342247AF3120007E0DF /* TextField1.swift in Sources */,
 				B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */,
 				B42A0329247AD2E90007E0DF /* SceneDelegate.swift in Sources */,
-				B42A0344247AF4EF0007E0DF /* ButtonView1.swift in Sources */,
 				B42A032B247AD2E90007E0DF /* LandingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  RegisterScreen.swift
+//  LoginView.swift
 //  Squad-Chat
 //
 //  Created by Justin Cole on 5/24/20.
@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-struct RegisterScreen: View {
-    
+struct LoginView: View {
     @State var username = ""
     @State var password = ""
     
@@ -19,21 +18,20 @@ struct RegisterScreen: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 Spacer()
-                Text("Create a Squad Chat account")
+                Text("Log in to Squad Chat")
                     .font(.subheadline)
                     .bold()
                 Spacer()
                 TextField1(label: "Username:",attribute: $username)
                 TextField1(label: "Password:",attribute: $password)
-
                 Spacer()
             }.padding(.horizontal)
         }
     }
 }
 
-struct RegisterScreen_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterScreen()
+        LoginView()
     }
 }

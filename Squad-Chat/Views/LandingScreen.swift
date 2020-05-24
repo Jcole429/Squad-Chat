@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var registerScreen = RegisterScreen()
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -20,8 +22,23 @@ struct ContentView: View {
                         .font(.title)
                         .bold()
                     Spacer()
-                    ButtonView1(text: "Register")
-                    ButtonView1(text: "Login")
+                    NavigationLink(destination: RegisterScreen()) {
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.white)
+                            .frame(height:50)
+                            .padding(.horizontal)
+                            .overlay(Text("Register")
+                                .foregroundColor(.black))
+                    }
+                    NavigationLink(destination: LoginView()) {
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.white)
+                            .frame(height:50)
+                            .padding(.horizontal)
+                            .overlay(Text("Login")
+                                .foregroundColor(.black))
+                    }
+                    //                    ButtonView1(text: "Login")
                     Spacer()
                 }
             }
