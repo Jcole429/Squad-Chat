@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27BAF3705A7BFBFE3B66D528 /* Pods_Squad_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979B85150B7D69FABB09C6B /* Pods_Squad_Chat.framework */; };
 		B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0326247AD2E90007E0DF /* AppDelegate.swift */; };
 		B42A0329247AD2E90007E0DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0328247AD2E90007E0DF /* SceneDelegate.swift */; };
-		B42A032B247AD2E90007E0DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A032A247AD2E90007E0DF /* ContentView.swift */; };
+		B42A032B247AD2E90007E0DF /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A032A247AD2E90007E0DF /* LandingScreen.swift */; };
 		B42A032D247AD2EA0007E0DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42A032C247AD2EA0007E0DF /* Assets.xcassets */; };
 		B42A0330247AD2EA0007E0DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42A032F247AD2EA0007E0DF /* Preview Assets.xcassets */; };
 		B42A0333247AD2EA0007E0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42A0331247AD2EA0007E0DF /* LaunchScreen.storyboard */; };
+		B42A0340247AE5650007E0DF /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A033F247AE5650007E0DF /* RegisterScreen.swift */; };
+		B42A0342247AF3120007E0DF /* TextField1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0341247AF3120007E0DF /* TextField1.swift */; };
+		B42A0344247AF4EF0007E0DF /* ButtonView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0343247AF4EF0007E0DF /* ButtonView1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86D82230BD18D1B6B4E2DE9A /* Pods-Squad-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.release.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.release.xcconfig"; sourceTree = "<group>"; };
+		A979B85150B7D69FABB09C6B /* Pods_Squad_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Squad_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42A0323247AD2E90007E0DF /* Squad-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squad-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42A0326247AD2E90007E0DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B42A0328247AD2E90007E0DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B42A032A247AD2E90007E0DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B42A032A247AD2E90007E0DF /* LandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
 		B42A032C247AD2EA0007E0DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B42A032F247AD2EA0007E0DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42A0332247AD2EA0007E0DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B42A0334247AD2EA0007E0DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B42A033F247AE5650007E0DF /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		B42A0341247AF3120007E0DF /* TextField1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField1.swift; sourceTree = "<group>"; };
+		B42A0343247AF4EF0007E0DF /* ButtonView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView1.swift; sourceTree = "<group>"; };
+		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BAF3705A7BFBFE3B66D528 /* Pods_Squad_Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74DBEF5F0846C7C8A9AD17F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */,
+				86D82230BD18D1B6B4E2DE9A /* Pods-Squad-Chat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		99848DF4323E0302935E8F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A979B85150B7D69FABB09C6B /* Pods_Squad_Chat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B42A031A247AD2E90007E0DF = {
 			isa = PBXGroup;
 			children = (
 				B42A0325247AD2E90007E0DF /* Squad-Chat */,
 				B42A0324247AD2E90007E0DF /* Products */,
+				74DBEF5F0846C7C8A9AD17F9 /* Pods */,
+				99848DF4323E0302935E8F87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +88,7 @@
 			children = (
 				B42A0326247AD2E90007E0DF /* AppDelegate.swift */,
 				B42A0328247AD2E90007E0DF /* SceneDelegate.swift */,
-				B42A032A247AD2E90007E0DF /* ContentView.swift */,
+				B42A033A247AD3B60007E0DF /* Views */,
 				B42A032C247AD2EA0007E0DF /* Assets.xcassets */,
 				B42A0331247AD2EA0007E0DF /* LaunchScreen.storyboard */,
 				B42A0334247AD2EA0007E0DF /* Info.plist */,
@@ -75,6 +105,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B42A033A247AD3B60007E0DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B42A032A247AD2E90007E0DF /* LandingScreen.swift */,
+				B42A033F247AE5650007E0DF /* RegisterScreen.swift */,
+				B42A0341247AF3120007E0DF /* TextField1.swift */,
+				B42A0343247AF4EF0007E0DF /* ButtonView1.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B42A0337247AD2EA0007E0DF /* Build configuration list for PBXNativeTarget "Squad-Chat" */;
 			buildPhases = (
+				8400465C2798802D25158B07 /* [CP] Check Pods Manifest.lock */,
 				B42A031F247AD2E90007E0DF /* Sources */,
 				B42A0320247AD2E90007E0DF /* Frameworks */,
 				B42A0321247AD2E90007E0DF /* Resources */,
+				A59CEABAA63CFE76EDF2A3D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,14 +184,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8400465C2798802D25158B07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Squad-Chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A59CEABAA63CFE76EDF2A3D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B42A031F247AD2E90007E0DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42A0340247AE5650007E0DF /* RegisterScreen.swift in Sources */,
+				B42A0342247AF3120007E0DF /* TextField1.swift in Sources */,
 				B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */,
 				B42A0329247AD2E90007E0DF /* SceneDelegate.swift in Sources */,
-				B42A032B247AD2E90007E0DF /* ContentView.swift in Sources */,
+				B42A0344247AF4EF0007E0DF /* ButtonView1.swift in Sources */,
+				B42A032B247AD2E90007E0DF /* LandingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +370,7 @@
 		};
 		B42A0338247AD2EA0007E0DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +391,7 @@
 		};
 		B42A0339247AD2EA0007E0DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D82230BD18D1B6B4E2DE9A /* Pods-Squad-Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
