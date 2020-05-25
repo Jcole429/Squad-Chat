@@ -10,11 +10,10 @@ import SwiftUI
 import Firebase
 
 struct RegisterView: View {
-    
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State var email = ""
-    @State var password = ""
+    @State var email = "TestUser1@email.com"
+    @State var password = "Test123"
     
     var body: some View {
         ZStack {
@@ -29,28 +28,30 @@ struct RegisterView: View {
                 TextField1(label: "Email",value: $email, type: Constants.normalTextField)
                 TextField1(label: "Password",value: $password, type: Constants.secureTextField)
                 ActionButton(label: "Create Account") {
-                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                    self.createAccountPressed(email: self.email, password: self.password)
                 }
                 Spacer()
             }.padding(.horizontal)
         }
     }
+    
+    func createAccountPressed(email: String?, password: String?) {
+        
+        if let safeEmail = email, let safePassword = password {
+            Auth.auth().createUser(withEmail: safeEmail, password: safePassword) { (authResult, error) in
+                if let e = error {
+                    print(e)
+                } else {
+                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                }
+            }
+        }
+    }
+
 }
 
 struct RegisterScreen_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()
-    }
-}
-
-func createAccountPressed(email: String?, password: String?) {
-    if let safeEmail = email, let safePassword = password {
-        Auth.auth().createUser(withEmail: safeEmail, password: safePassword) { (authResult, error) in
-            if let e = error {
-                print(e)
-            } else {
-                
-            }
-        }
     }
 }
