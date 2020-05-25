@@ -18,7 +18,7 @@ struct TextField1: View {
     var body: some View {
         VStack {
             HStack {
-                Text(label)
+                Text("\(label):")
                 Spacer()
             }
             RoundedRectangle(cornerRadius: 25)
@@ -27,10 +27,10 @@ struct TextField1: View {
                 .overlay(
                     HStack {
                         if type == "Normal" {
-                            TextField(Constants.normalTextField, text: $value)
+                            TextField(label, text: $value)
                             .foregroundColor(Color.black)
                         } else if type == Constants.secureTextField {
-                            SecureField("Title", text: $value)
+                            SecureField(label, text: $value)
                             .foregroundColor(Color.black)
                         }
                     }.padding(.horizontal)

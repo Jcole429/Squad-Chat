@@ -7,5 +7,7 @@ target 'Squad-Chat' do
 
   # Pods for Squad-Chat
   pod 'IQKeyboardManager', '~> 6.5'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end

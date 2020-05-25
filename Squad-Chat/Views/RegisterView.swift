@@ -23,9 +23,9 @@ struct RegisterView: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Username:",value: $username, type: Constants.normalTextField)
-                TextField1(label: "Password:",value: $password, type: Constants.secureTextField)
-
+                TextField1(label: "Username",value: $username, type: Constants.normalTextField)
+                TextField1(label: "Password",value: $password, type: Constants.secureTextField)
+                ActionButton(label: "Create Account")
                 Spacer()
             }.padding(.horizontal)
         }

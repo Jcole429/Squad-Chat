@@ -1,20 +1,21 @@
 //
-//  NavigationButton.swift
+//  ActionButton.swift
 //  Squad-Chat
 //
-//  Created by Justin Cole on 5/24/20.
+//  Created by Justin Cole on 5/25/20.
 //  Copyright © 2020 Jcole. All rights reserved.
 //
 
 import SwiftUI
 
-struct NavigationButton<DestinationView: View>: View {
+struct ActionButton: View {
     
     let label: String
-    let destination: DestinationView
     
     var body: some View {
-        NavigationLink(destination: destination) {
+        Button(action: {
+            print("Hello")
+        }) {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color.white)
                 .frame(height:50)
@@ -25,11 +26,11 @@ struct NavigationButton<DestinationView: View>: View {
     }
 }
 
-struct NavigationButton_Previews: PreviewProvider {
+struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             Color("Amethyst")
-            NavigationButton(label: "Test Label", destination: RegisterView())
+            ActionButton(label: "Test label")
         }
     }
 }
