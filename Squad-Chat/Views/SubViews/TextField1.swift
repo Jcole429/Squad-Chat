@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct TextField1: View {
+    
     var label: String
-    @Binding var attribute: String
+    @Binding var value: String
+    var type: String
 
 
     var body: some View {
@@ -24,8 +26,13 @@ struct TextField1: View {
                 .frame(height:50)
                 .overlay(
                     HStack {
-                        TextField("Title", text: $attribute)
+                        if type == "Normal" {
+                            TextField(Constants.normalTextField, text: $value)
                             .foregroundColor(Color.black)
+                        } else if type == Constants.secureTextField {
+                            SecureField("Title", text: $value)
+                            .foregroundColor(Color.black)
+                        }
                     }.padding(.horizontal)
             )
         }
@@ -38,7 +45,7 @@ struct TextField1_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             Color("Amethyst")
-            TextField1(label: "Test Label", attribute: $testString)
+            TextField1(label: "Test Label", value: $testString, type: Constants.normalTextField)
             .previewLayout(.sizeThatFits)
         }
     }

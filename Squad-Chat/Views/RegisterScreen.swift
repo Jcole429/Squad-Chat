@@ -23,8 +23,8 @@ struct RegisterScreen: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Username:",attribute: $username)
-                TextField1(label: "Password:",attribute: $password)
+                TextField1(label: "Username:",value: $username, type: Constants.normalTextField)
+                TextField1(label: "Password:",value: $password, type: Constants.secureTextField)
 
                 Spacer()
             }.padding(.horizontal)
