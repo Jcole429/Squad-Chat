@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct LandingView: View {
-    @State var registerScreen = RegisterView()
+
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         NavigationView{

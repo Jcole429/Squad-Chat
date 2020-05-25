@@ -25,11 +25,11 @@ struct NavigationButton<DestinationView: View>: View {
     }
 }
 
-struct NavigationButton_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack{
-            Color("Amethyst")
-            NavigationButton(label: "Test Label", destination: RegisterView())
-        }
-    }
-}
+//struct NavigationButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack{
+//            Color("Amethyst")
+//            NavigationButton(label: "Test Label", destination: RegisterView(viewRouter: ViewRouter()))
+//        }
+//    }
+//}

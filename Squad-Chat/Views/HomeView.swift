@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
         VStack {
             Text("Welcome to the homescreen")

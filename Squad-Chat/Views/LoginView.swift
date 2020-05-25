@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var username = ""
     @State var password = ""
     

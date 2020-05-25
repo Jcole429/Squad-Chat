@@ -9,6 +9,12 @@
 import Foundation
 
 struct Constants {
+    
+    struct Pages{
+        static let landingPage = "LandingPage"
+        static let homePage = "HomePage"
+    }
+    
     static let normalTextField = "Normal"
     static let secureTextField = "Secure"
 }

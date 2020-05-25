@@ -21,6 +21,8 @@
 		B42A034B247B52C60007E0DF /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A034A247B52C60007E0DF /* NavigationButton.swift */; };
 		B42A0377247C2D540007E0DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0376247C2D540007E0DF /* HomeView.swift */; };
 		B42A0379247C2F480007E0DF /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0378247C2F480007E0DF /* ActionButton.swift */; };
+		B42A037B247C3A230007E0DF /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A037A247C3A230007E0DF /* MotherView.swift */; };
+		B42A037E247C3E990007E0DF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A037D247C3E990007E0DF /* ViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		B42A034A247B52C60007E0DF /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		B42A0376247C2D540007E0DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B42A0378247C2F480007E0DF /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		B42A037A247C3A230007E0DF /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		B42A037D247C3E990007E0DF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,7 @@
 				B42A0326247AD2E90007E0DF /* AppDelegate.swift */,
 				B42A0328247AD2E90007E0DF /* SceneDelegate.swift */,
 				B42A0347247B308E0007E0DF /* Constants.swift */,
+				B42A037C247C3E830007E0DF /* Models */,
 				B42A033A247AD3B60007E0DF /* Views */,
 				B42A032C247AD2EA0007E0DF /* Assets.xcassets */,
 				B42A0331247AD2EA0007E0DF /* LaunchScreen.storyboard */,
@@ -117,6 +122,7 @@
 		B42A033A247AD3B60007E0DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B42A037A247C3A230007E0DF /* MotherView.swift */,
 				B42A032A247AD2E90007E0DF /* LandingView.swift */,
 				B42A033F247AE5650007E0DF /* RegisterView.swift */,
 				B42A0345247B29D00007E0DF /* LoginView.swift */,
@@ -134,6 +140,14 @@
 				B42A0378247C2F480007E0DF /* ActionButton.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		B42A037C247C3E830007E0DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B42A037D247C3E990007E0DF /* ViewRouter.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +268,11 @@
 				B42A0377247C2D540007E0DF /* HomeView.swift in Sources */,
 				B42A0346247B29D00007E0DF /* LoginView.swift in Sources */,
 				B42A0340247AE5650007E0DF /* RegisterView.swift in Sources */,
+				B42A037E247C3E990007E0DF /* ViewRouter.swift in Sources */,
 				B42A0342247AF3120007E0DF /* TextField1.swift in Sources */,
 				B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */,
 				B42A0348247B308E0007E0DF /* Constants.swift in Sources */,
+				B42A037B247C3A230007E0DF /* MotherView.swift in Sources */,
 				B42A034B247B52C60007E0DF /* NavigationButton.swift in Sources */,
 				B42A0329247AD2E90007E0DF /* SceneDelegate.swift in Sources */,
 				B42A032B247AD2E90007E0DF /* LandingView.swift in Sources */,

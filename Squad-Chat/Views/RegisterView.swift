@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct RegisterView: View {
     
-    @State var username = ""
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    @State var email = ""
     @State var password = ""
     
     var body: some View {
@@ -23,9 +26,11 @@ struct RegisterView: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Username",value: $username, type: Constants.normalTextField)
+                TextField1(label: "Email",value: $email, type: Constants.normalTextField)
                 TextField1(label: "Password",value: $password, type: Constants.secureTextField)
-                ActionButton(label: "Create Account")
+                ActionButton(label: "Create Account") {
+                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                }
                 Spacer()
             }.padding(.horizontal)
         }
@@ -35,5 +40,17 @@ struct RegisterView: View {
 struct RegisterScreen_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()
+    }
+}
+
+func createAccountPressed(email: String?, password: String?) {
+    if let safeEmail = email, let safePassword = password {
+        Auth.auth().createUser(withEmail: safeEmail, password: safePassword) { (authResult, error) in
+            if let e = error {
+                print(e)
+            } else {
+                
+            }
+        }
     }
 }

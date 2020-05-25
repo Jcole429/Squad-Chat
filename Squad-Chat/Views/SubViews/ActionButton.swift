@@ -11,10 +11,11 @@ import SwiftUI
 struct ActionButton: View {
     
     let label: String
+    let action: ()  -> Void
     
     var body: some View {
         Button(action: {
-            print("Hello")
+            self.action()
         }) {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color.white)
@@ -30,7 +31,7 @@ struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             Color("Amethyst")
-            ActionButton(label: "Test label")
+            ActionButton(label: "Test label", action: {print("hello")})
         }
     }
 }
