@@ -17,14 +17,14 @@ struct HomeView: View {
     
     let db = Firestore.firestore()
     
+    var listener: ListenerRegistration?
+    
+    @ObservedObject var messageController = MessageController()
+    
     var body: some View {
         VStack {
-            ScrollView{
-                MessageView(messageBody: "Hello!")
-                MessageView(messageBody: "How are you?")
-                MessageView(messageBody: "I'm doing well.")
-                MessageView(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-                
+            List(messageController.messages) { message in
+                MessageView(message: message)
             }
             Rectangle()
                 .fill(Color.purple)
@@ -43,7 +43,12 @@ struct HomeView: View {
                         })
                     }
             )
-        }.padding(.horizontal)
+        }
+        .padding(.horizontal)
+        .onAppear{
+            self.messageController.fetchMessages()
+            
+        }
     }
     
     func sendPressed() {

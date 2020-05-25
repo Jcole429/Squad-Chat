@@ -10,20 +10,20 @@ import SwiftUI
 
 struct MessageView: View {
     
-    var messageBody: String
+    var message: Message
     
     var body: some View {
         
         VStack {
             HStack {
                 Spacer().frame(width:40)
-                Text("Test User")
+                Text(message.sender)
                 Spacer()
             }
             HStack{
                 Circle().foregroundColor(.blue).frame(width:30, height:30)
-                Capsule().overlay(Text(messageBody)
-                    .foregroundColor(.white)
+                Capsule().overlay(Text(message.body)
+                    .foregroundColor(.red)
                     .lineLimit(nil).multilineTextAlignment(.leading))
                 Spacer()
                 Circle().foregroundColor(.blue).frame(width:30, height:30)
@@ -34,6 +34,6 @@ struct MessageView: View {
 
 struct Message_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.").previewLayout(.sizeThatFits)
+        MessageView(message: Message(id: "1", sender: "Test@email.com",body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")).previewLayout(.sizeThatFits)
     }
 }

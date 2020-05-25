@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Message {
+struct Message: Identifiable {
+    let id: String
     let sender: String
     let body: String
 }
