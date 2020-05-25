@@ -18,7 +18,10 @@ struct HomeView: View {
                 Message(messageBody: "Hello!")
                 Message(messageBody: "How are you?")
                 Message(messageBody: "I'm doing well.")
+                Message(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                    
             }
+            .padding(.horizontal)
         }
     }
 }

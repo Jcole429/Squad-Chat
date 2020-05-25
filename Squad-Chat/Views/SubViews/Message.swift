@@ -22,7 +22,9 @@ struct Message: View {
             }
             HStack{
                 Circle().foregroundColor(.blue).frame(width:30, height:30)
-                Capsule().overlay(Text(messageBody).foregroundColor(.white))
+                Capsule().overlay(Text(messageBody)
+                    .foregroundColor(.white)
+                    .lineLimit(nil).multilineTextAlignment(.leading))
                 Spacer()
                 Circle().foregroundColor(.blue).frame(width:30, height:30)
             }
@@ -32,6 +34,6 @@ struct Message: View {
 
 struct Message_Previews: PreviewProvider {
     static var previews: some View {
-        Message(messageBody: "Hello world!").previewLayout(.sizeThatFits)
+        Message(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.").previewLayout(.sizeThatFits)
     }
 }
