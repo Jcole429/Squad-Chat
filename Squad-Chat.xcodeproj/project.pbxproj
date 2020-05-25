@@ -25,6 +25,7 @@
 		B42A037E247C3E990007E0DF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A037D247C3E990007E0DF /* ViewRouter.swift */; };
 		B42A0380247C64430007E0DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B42A037F247C64430007E0DF /* GoogleService-Info.plist */; };
 		B42A0382247C67300007E0DF /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0381247C67300007E0DF /* MessageView.swift */; };
+		B42A0384247C81480007E0DF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0383247C81480007E0DF /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		B42A037D247C3E990007E0DF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		B42A037F247C64430007E0DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B42A0381247C67300007E0DF /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		B42A0383247C81480007E0DF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B42A037D247C3E990007E0DF /* ViewRouter.swift */,
+				B42A0383247C81480007E0DF /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				B42A0329247AD2E90007E0DF /* SceneDelegate.swift in Sources */,
 				B42A032B247AD2E90007E0DF /* LandingView.swift in Sources */,
 				B42A0379247C2F480007E0DF /* ActionButton.swift in Sources */,
+				B42A0384247C81480007E0DF /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
