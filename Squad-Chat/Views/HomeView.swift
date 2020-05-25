@@ -12,6 +12,8 @@ struct HomeView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
+    @State var messageText = ""
+    
     var body: some View {
         VStack {
             ScrollView{
@@ -19,10 +21,25 @@ struct HomeView: View {
                 Message(messageBody: "How are you?")
                 Message(messageBody: "I'm doing well.")
                 Message(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-                    
+                
             }
-            .padding(.horizontal)
-        }
+            Rectangle()
+                .fill(Color.purple)
+                .frame(height:40)
+                .overlay(
+                    HStack {
+                        TextField("Message", text: $messageText)
+                            .lineLimit(nil)
+                        Button(action: {
+                            print("Pressed")
+                        }, label: {
+                            Image(systemName: "paperplane")
+                                .frame(width:40, height: 40)
+                                .foregroundColor(Color.white)
+                        })
+                    }
+            )
+        }.padding(.horizontal)
     }
 }
 
