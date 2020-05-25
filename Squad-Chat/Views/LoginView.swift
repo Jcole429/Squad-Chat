@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State var username = ""
-    @State var password = ""
+    @State var email = "TestUser1@email.com"
+    @State var password = "Test123"
     
     var body: some View {
         ZStack {
@@ -25,10 +26,25 @@ struct LoginView: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Username:",value: $username, type: Constants.normalTextField)
+                TextField1(label: "Email:",value: $email, type: Constants.normalTextField)
                 TextField1(label: "Password:",value: $password, type: Constants.secureTextField)
+                ActionButton(label: "Login") {
+                    self.loginPressed(email: self.email, password: self.password)
+                }
                 Spacer()
             }.padding(.horizontal)
+        }
+    }
+    
+    func loginPressed(email: String?, password: String?) {
+        if let safeEmail = email, let safePassword = password {
+            Auth.auth().signIn(withEmail: safeEmail, password: safePassword) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                }
+            }
         }
     }
 }
