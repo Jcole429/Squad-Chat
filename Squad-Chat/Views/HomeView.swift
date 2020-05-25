@@ -7,12 +7,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct HomeView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State var messageText = ""
+    @State var messageBody = ""
+    
+    let db = Firestore.firestore()
     
     var body: some View {
         VStack {
@@ -28,10 +31,11 @@ struct HomeView: View {
                 .frame(height:40)
                 .overlay(
                     HStack {
-                        TextField("Message", text: $messageText)
+                        TextField("Message", text: $messageBody)
                             .lineLimit(nil)
                         Button(action: {
-                            print("Pressed")
+                            print("Button pressed")
+                            self.sendPressed()
                         }, label: {
                             Image(systemName: "paperplane")
                                 .frame(width:40, height: 40)
@@ -40,6 +44,29 @@ struct HomeView: View {
                     }
             )
         }.padding(.horizontal)
+    }
+    
+    func sendPressed() {
+        if messageBody != "" {
+            if let messageSender = Auth.auth().currentUser?.email {
+                
+                db.collection(Constants.FStore.Messages.collectionName).addDocument(data: [
+                    Constants.FStore.Messages.senderField: messageSender
+                    ,Constants.FStore.Messages.bodyField: messageBody
+                    ,Constants.FStore.Messages.timestamp: Date()
+                ]) { (error) in
+                    if let e = error {
+                        print("There was an issue saving message to firestore, \(e)")
+                    } else {
+                        print("Sucessfully saved message")
+                        DispatchQueue.main.async {
+                            self.messageBody = ""
+                        }
+                    }
+                }
+                
+            }
+        }
     }
 }
 

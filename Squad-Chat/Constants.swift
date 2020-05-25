@@ -17,4 +17,13 @@ struct Constants {
     
     static let normalTextField = "Normal"
     static let secureTextField = "Secure"
+    
+    struct FStore {
+        struct Messages {
+            static let collectionName = "messages"
+            static let senderField = "sender"
+            static let bodyField = "body"
+            static let timestamp = "timestamp"
+        }
+    }
 }
