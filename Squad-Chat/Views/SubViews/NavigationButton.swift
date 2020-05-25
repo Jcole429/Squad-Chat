@@ -8,12 +8,13 @@
 
 import SwiftUI
 
-struct NavigationButton: View {
+struct NavigationButton<DestinationView: View>: View {
     
     let label: String
+    let destination: DestinationView
     
     var body: some View {
-        NavigationLink(destination: RegisterScreen()) {
+        NavigationLink(destination: destination) {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color.white)
                 .frame(height:50)
@@ -26,6 +27,6 @@ struct NavigationButton: View {
 
 struct NavigationButton_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationButton(label: "Test Label")
+        NavigationButton(label: "Test Label", destination: RegisterView())
     }
 }

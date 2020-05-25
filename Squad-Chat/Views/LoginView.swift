@@ -18,7 +18,7 @@ struct LoginView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 Spacer()
-                Text("Log in to Squad Chat")
+                Text("Login to Squad Chat")
                     .font(.subheadline)
                     .bold()
                 Spacer()

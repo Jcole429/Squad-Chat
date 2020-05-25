@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RegisterScreen: View {
+struct RegisterView: View {
     
     @State var username = ""
     @State var password = ""
@@ -34,6 +34,6 @@ struct RegisterScreen: View {
 
 struct RegisterScreen_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterScreen()
+        RegisterView()
     }
 }
