@@ -20,10 +20,10 @@ struct HomeView: View {
     var body: some View {
         VStack {
             ScrollView{
-                Message(messageBody: "Hello!")
-                Message(messageBody: "How are you?")
-                Message(messageBody: "I'm doing well.")
-                Message(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                MessageView(messageBody: "Hello!")
+                MessageView(messageBody: "How are you?")
+                MessageView(messageBody: "I'm doing well.")
+                MessageView(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
                 
             }
             Rectangle()

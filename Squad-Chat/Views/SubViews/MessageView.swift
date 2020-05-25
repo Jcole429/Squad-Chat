@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Message: View {
+struct MessageView: View {
     
     var messageBody: String
     
@@ -34,6 +34,6 @@ struct Message: View {
 
 struct Message_Previews: PreviewProvider {
     static var previews: some View {
-        Message(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.").previewLayout(.sizeThatFits)
+        MessageView(messageBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.").previewLayout(.sizeThatFits)
     }
 }
