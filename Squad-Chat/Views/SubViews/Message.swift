@@ -14,10 +14,18 @@ struct Message: View {
     
     var body: some View {
         
-        HStack{
-            Circle().foregroundColor(.blue).frame(width:30, height:30)
-            Text(messageBody)
-            Circle().foregroundColor(.blue).frame(width:30, height:30)
+        VStack {
+            HStack {
+                Spacer().frame(width:40)
+                Text("Test User")
+                Spacer()
+            }
+            HStack{
+                Circle().foregroundColor(.blue).frame(width:30, height:30)
+                Capsule().overlay(Text(messageBody).foregroundColor(.white))
+                Spacer()
+                Circle().foregroundColor(.blue).frame(width:30, height:30)
+            }
         }
     }
 }
