@@ -14,13 +14,11 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to the homescreen")
-            List {
-                ListItem(text: "Group1")
-                ListItem(text: "Group2")
-                ListItem(text: "Group3")
+            ScrollView{
+                Message(messageBody: "Hello!")
+                Message(messageBody: "How are you?")
+                Message(messageBody: "I'm doing well.")
             }
-
         }
     }
 }
