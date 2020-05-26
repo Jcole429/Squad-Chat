@@ -23,8 +23,12 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            List(messageController.messages) { message in
-                MessageView(message: message)
+            ReverseScrollView {
+                VStack(spacing: 0) {
+                    ForEach(self.messageController.messages) { message in
+                        return MessageView(message: message)
+                    }
+                }
             }
             Rectangle()
                 .fill(Color.purple)
@@ -69,7 +73,6 @@ struct HomeView: View {
                         }
                     }
                 }
-                
             }
         }
     }
