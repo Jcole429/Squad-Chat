@@ -28,6 +28,7 @@
 		B42A0384247C81480007E0DF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0383247C81480007E0DF /* Message.swift */; };
 		B42A0387247C84640007E0DF /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0386247C84640007E0DF /* MessageController.swift */; };
 		B42A0389247CB1CF0007E0DF /* ReverseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0388247CB1CF0007E0DF /* ReverseScrollView.swift */; };
+		B42A038B247CBC440007E0DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038A247CBC440007E0DF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,7 @@
 		B42A0345247B29D00007E0DF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B42A0347247B308E0007E0DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B42A034A247B52C60007E0DF /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
-		B42A0376247C2D540007E0DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B42A0376247C2D540007E0DF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		B42A0378247C2F480007E0DF /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		B42A037A247C3A230007E0DF /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		B42A037D247C3E990007E0DF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		B42A0383247C81480007E0DF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B42A0386247C84640007E0DF /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		B42A0388247CB1CF0007E0DF /* ReverseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseScrollView.swift; sourceTree = "<group>"; };
+		B42A038A247CBC440007E0DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +140,7 @@
 				B42A032A247AD2E90007E0DF /* LandingView.swift */,
 				B42A033F247AE5650007E0DF /* RegisterView.swift */,
 				B42A0345247B29D00007E0DF /* LoginView.swift */,
-				B42A0376247C2D540007E0DF /* HomeView.swift */,
+				B42A0376247C2D540007E0DF /* ChatView.swift */,
 				B42A0349247B52970007E0DF /* SubViews */,
 			);
 			path = Views;
@@ -161,6 +163,7 @@
 			children = (
 				B42A037D247C3E990007E0DF /* ViewRouter.swift */,
 				B42A0383247C81480007E0DF /* Message.swift */,
+				B42A038A247CBC440007E0DF /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,13 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42A0377247C2D540007E0DF /* HomeView.swift in Sources */,
+				B42A0377247C2D540007E0DF /* ChatView.swift in Sources */,
 				B42A0346247B29D00007E0DF /* LoginView.swift in Sources */,
 				B42A0340247AE5650007E0DF /* RegisterView.swift in Sources */,
 				B42A037E247C3E990007E0DF /* ViewRouter.swift in Sources */,
 				B42A0342247AF3120007E0DF /* TextField1.swift in Sources */,
 				B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */,
 				B42A0348247B308E0007E0DF /* Constants.swift in Sources */,
+				B42A038B247CBC440007E0DF /* User.swift in Sources */,
 				B42A0387247C84640007E0DF /* MessageController.swift in Sources */,
 				B42A0389247CB1CF0007E0DF /* ReverseScrollView.swift in Sources */,
 				B42A037B247C3A230007E0DF /* MotherView.swift in Sources */,

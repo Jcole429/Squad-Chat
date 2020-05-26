@@ -25,5 +25,12 @@ struct Constants {
             static let bodyField = "body"
             static let timestamp = "timestamp"
         }
+        
+        struct Users {
+            static let collectionName = "users"
+            static let uid = "uid"
+            static let email = "email"
+            static let username = "username"
+        }
     }
 }
