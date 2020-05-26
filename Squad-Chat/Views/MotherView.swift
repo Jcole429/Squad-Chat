@@ -17,7 +17,7 @@ struct MotherView: View {
             if viewRouter.currentPage == Constants.Pages.landingPage {
                 LandingView()
             } else if viewRouter.currentPage == Constants.Pages.homePage {
-                HomeView()
+                ChatView()
             }
         }
     }

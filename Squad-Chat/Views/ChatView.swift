@@ -9,7 +9,7 @@
 import SwiftUI
 import Firebase
 
-struct HomeView: View {
+struct ChatView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
@@ -80,7 +80,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ChatView()
     }
 }
 

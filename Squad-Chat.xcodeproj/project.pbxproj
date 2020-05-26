@@ -19,7 +19,7 @@
 		B42A0346247B29D00007E0DF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0345247B29D00007E0DF /* LoginView.swift */; };
 		B42A0348247B308E0007E0DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0347247B308E0007E0DF /* Constants.swift */; };
 		B42A034B247B52C60007E0DF /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A034A247B52C60007E0DF /* NavigationButton.swift */; };
-		B42A0377247C2D540007E0DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0376247C2D540007E0DF /* HomeView.swift */; };
+		B42A0377247C2D540007E0DF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0376247C2D540007E0DF /* ChatView.swift */; };
 		B42A0379247C2F480007E0DF /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0378247C2F480007E0DF /* ActionButton.swift */; };
 		B42A037B247C3A230007E0DF /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A037A247C3A230007E0DF /* MotherView.swift */; };
 		B42A037E247C3E990007E0DF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A037D247C3E990007E0DF /* ViewRouter.swift */; };
