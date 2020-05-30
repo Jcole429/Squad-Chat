@@ -30,11 +30,17 @@ class MessageController: ObservableObject {
                         
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let messageSender = data[Constants.FStore.Messages.senderField] as? String, let messageBody = data[Constants.FStore.Messages.bodyField] as? String {
-                                let newMessage = Message(id: doc.documentID, sender: messageSender, body: messageBody)
+                            if let userUid = data[Constants.FStore.Messages.userUidField] as! String?
+                                ,let userEmail = data[Constants.FStore.Messages.userEmailField] as! String?
+                                ,let userDisplayName = data[Constants.FStore.Messages.userDisplayNameField] as! String?
+                                ,let messageBody = data[Constants.FStore.Messages.bodyField] as? String {
+                                let newMessage = Message(id: doc.documentID, userUid: userUid, userEmail: userEmail, userDisplayName: userDisplayName, body: messageBody)
+                                
                                 DispatchQueue.main.async {
                                     self.messages.append(newMessage)
                                 }
+                            } else {
+                                print("Could not parse user data")
                             }
                         }
                     }

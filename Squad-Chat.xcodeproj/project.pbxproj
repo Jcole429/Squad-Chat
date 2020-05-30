@@ -29,6 +29,8 @@
 		B42A0387247C84640007E0DF /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0386247C84640007E0DF /* MessageController.swift */; };
 		B42A0389247CB1CF0007E0DF /* ReverseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0388247CB1CF0007E0DF /* ReverseScrollView.swift */; };
 		B42A038B247CBC440007E0DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038A247CBC440007E0DF /* User.swift */; };
+		B42A038D247CC7B80007E0DF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038C247CC7B80007E0DF /* Helper.swift */; };
+		B42A038F247E1BB20007E0DF /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038E247E1BB20007E0DF /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		B42A0386247C84640007E0DF /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		B42A0388247CB1CF0007E0DF /* ReverseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseScrollView.swift; sourceTree = "<group>"; };
 		B42A038A247CBC440007E0DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B42A038C247CC7B80007E0DF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B42A038E247E1BB20007E0DF /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,7 @@
 				B42A0326247AD2E90007E0DF /* AppDelegate.swift */,
 				B42A0328247AD2E90007E0DF /* SceneDelegate.swift */,
 				B42A0347247B308E0007E0DF /* Constants.swift */,
+				B42A038C247CC7B80007E0DF /* Helper.swift */,
 				B42A037C247C3E830007E0DF /* Models */,
 				B42A033A247AD3B60007E0DF /* Views */,
 				B42A0385247C84350007E0DF /* Controllers */,
@@ -164,6 +169,7 @@
 				B42A037D247C3E990007E0DF /* ViewRouter.swift */,
 				B42A0383247C81480007E0DF /* Message.swift */,
 				B42A038A247CBC440007E0DF /* User.swift */,
+				B42A038E247E1BB20007E0DF /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,11 +303,13 @@
 				B42A0340247AE5650007E0DF /* RegisterView.swift in Sources */,
 				B42A037E247C3E990007E0DF /* ViewRouter.swift in Sources */,
 				B42A0342247AF3120007E0DF /* TextField1.swift in Sources */,
+				B42A038D247CC7B80007E0DF /* Helper.swift in Sources */,
 				B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */,
 				B42A0348247B308E0007E0DF /* Constants.swift in Sources */,
 				B42A038B247CBC440007E0DF /* User.swift in Sources */,
 				B42A0387247C84640007E0DF /* MessageController.swift in Sources */,
 				B42A0389247CB1CF0007E0DF /* ReverseScrollView.swift in Sources */,
+				B42A038F247E1BB20007E0DF /* Session.swift in Sources */,
 				B42A037B247C3A230007E0DF /* MotherView.swift in Sources */,
 				B42A034B247B52C60007E0DF /* NavigationButton.swift in Sources */,
 				B42A0382247C67300007E0DF /* MessageView.swift in Sources */,

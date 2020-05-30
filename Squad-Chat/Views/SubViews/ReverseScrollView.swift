@@ -93,7 +93,7 @@ extension ViewHeightKey: ViewModifier {
 struct ReverseScrollView_Previews: PreviewProvider {
     static var previews: some View {
         ReverseScrollView {
-            MessageView(message: Message(id: "1", sender: "Test@email.com", body: "Hello!"))
+            MessageView(message: Message(id: "1", userUid: "1", userEmail: "testuser@email.com", userDisplayName: "TestUser", body: "Hello!"))
         }
         .previewLayout(.sizeThatFits)
     }

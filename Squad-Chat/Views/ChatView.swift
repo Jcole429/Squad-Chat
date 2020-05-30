@@ -15,6 +15,8 @@ struct ChatView: View {
     
     @State var messageBody = ""
     
+    let currentAuth = Auth.auth().currentUser
+    
     let db = Firestore.firestore()
     
     var listener: ListenerRegistration?
@@ -57,10 +59,15 @@ struct ChatView: View {
     
     func sendPressed() {
         if messageBody != "" {
-            if let messageSender = Auth.auth().currentUser?.email {
+            if let currentUserAuth = Auth.auth().currentUser {
+                
+                let user = User(uid: currentUserAuth.uid, email: currentUserAuth.email!, displayName: currentUserAuth.displayName)
+                
                 
                 db.collection(Constants.FStore.Messages.collectionName).addDocument(data: [
-                    Constants.FStore.Messages.senderField: messageSender
+                    Constants.FStore.Messages.userUidField: user.uid
+                    ,Constants.FStore.Messages.userEmailField: user.email
+                    ,Constants.FStore.Messages.userDisplayNameField: user.displayName ?? nil!
                     ,Constants.FStore.Messages.bodyField: messageBody
                     ,Constants.FStore.Messages.timestamp: Date()
                 ]) { (error) in

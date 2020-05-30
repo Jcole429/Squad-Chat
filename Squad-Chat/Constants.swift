@@ -21,7 +21,9 @@ struct Constants {
     struct FStore {
         struct Messages {
             static let collectionName = "messages"
-            static let senderField = "sender"
+            static let userUidField = "userUid"
+            static let userEmailField = "userEmail"
+            static let userDisplayNameField = "userDisplayName"
             static let bodyField = "body"
             static let timestamp = "timestamp"
         }

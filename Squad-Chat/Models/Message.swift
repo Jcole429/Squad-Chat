@@ -10,6 +10,12 @@ import Foundation
 
 struct Message: Identifiable {
     let id: String
-    let sender: String
+    let userUid: String
+    let userEmail: String
+    let userDisplayName:String
     let body: String
+    
+    func getDisplayName() -> String {
+        return self.userDisplayName
+    }
 }

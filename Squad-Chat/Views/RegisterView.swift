@@ -50,18 +50,29 @@ struct RegisterView: View {
                 } else {
                     print("Successfully authenticated user")
                     if let currentUser = Auth.auth().currentUser {
+                        let changeRequest = currentUser.createProfileChangeRequest()
+                        changeRequest.displayName = username
+                        changeRequest.commitChanges { (error) in
+                            if let e = error {
+                                print("There was an issue updating user's username, \(e)")
+                            }
+                            else {
+                                print("Sucessfully updated username")
+                                
+                            }
+                        }
                         self.db.collection(Constants.FStore.Users.collectionName).addDocument(data: [
                             Constants.FStore.Users.uid: currentUser.uid
                             ,Constants.FStore.Users.email: safeEmail
                             ,Constants.FStore.Users.username: safeUsername
-                            ]) { (error) in
-                                if let e = error {
-                                    print("There was an issue saving message to firestore, \(e)")
-                                } else {
-                                    print("Successfully saved user")
-                                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
-                                }
+                        ]) { (error) in
+                            if let e = error {
+                                print("There was an issue saving message to firestore, \(e)")
+                            } else {
+                                print("Successfully saved user")
+                                self.viewRouter.setPage(pageName: Constants.Pages.homePage)
                             }
+                        }
                     }
                     
                 }
