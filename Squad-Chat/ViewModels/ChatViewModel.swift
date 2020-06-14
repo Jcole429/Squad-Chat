@@ -10,9 +10,10 @@ import Foundation
 import Firebase
 
 
-class MessageController: ObservableObject {
+class ChatViewModel: ObservableObject {
     
     @Published var messages = [Message]()
+    @Published var newMessageText = ""
     
     let db = Firestore.firestore()
     var listener: ListenerRegistration?
@@ -45,6 +46,33 @@ class MessageController: ObservableObject {
                         }
                     }
                 }
+        }
+    }
+    
+    func sendPressed() {
+        if newMessageText != "" {
+            if let currentUserAuth = Auth.auth().currentUser {
+                
+                let user = User(uid: currentUserAuth.uid, email: currentUserAuth.email!, displayName: currentUserAuth.displayName)
+                
+                
+                db.collection(Constants.FStore.Messages.collectionName).addDocument(data: [
+                    Constants.FStore.Messages.userUidField: user.uid
+                    ,Constants.FStore.Messages.userEmailField: user.email
+                    ,Constants.FStore.Messages.userDisplayNameField: user.displayName ?? nil!
+                    ,Constants.FStore.Messages.bodyField: newMessageText
+                    ,Constants.FStore.Messages.timestamp: Date()
+                ]) { (error) in
+                    if let e = error {
+                        print("There was an issue saving message to firestore, \(e)")
+                    } else {
+                        print("Sucessfully saved message")
+                        DispatchQueue.main.async {
+                            self.newMessageText = ""
+                        }
+                    }
+                }
+            }
         }
     }
 }

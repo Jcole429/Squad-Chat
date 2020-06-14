@@ -13,21 +13,19 @@ struct ChatView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State var messageBody = ""
-    
     let currentAuth = Auth.auth().currentUser
     
     let db = Firestore.firestore()
     
     var listener: ListenerRegistration?
     
-    @ObservedObject var messageController = MessageController()
+    @ObservedObject var chatViewModel = ChatViewModel()
     
     var body: some View {
         VStack {
             ReverseScrollView {
                 VStack(spacing: 0) {
-                    ForEach(self.messageController.messages) { message in
+                    ForEach(self.chatViewModel.messages) { message in
                         return MessageView(message: message)
                     }
                 }
@@ -37,11 +35,11 @@ struct ChatView: View {
                 .frame(height:40)
                 .overlay(
                     HStack {
-                        TextField("Message", text: $messageBody)
+                        TextField("Message", text: $chatViewModel.newMessageText)
                             .lineLimit(nil)
                         Button(action: {
                             print("Button pressed")
-                            self.sendPressed()
+                            self.chatViewModel.sendPressed()
                         }, label: {
                             Image(systemName: "paperplane")
                                 .frame(width:40, height: 40)
@@ -52,35 +50,8 @@ struct ChatView: View {
         }
         .padding(.horizontal)
         .onAppear{
-            self.messageController.fetchMessages()
+            self.chatViewModel.fetchMessages()
             
-        }
-    }
-    
-    func sendPressed() {
-        if messageBody != "" {
-            if let currentUserAuth = Auth.auth().currentUser {
-                
-                let user = User(uid: currentUserAuth.uid, email: currentUserAuth.email!, displayName: currentUserAuth.displayName)
-                
-                
-                db.collection(Constants.FStore.Messages.collectionName).addDocument(data: [
-                    Constants.FStore.Messages.userUidField: user.uid
-                    ,Constants.FStore.Messages.userEmailField: user.email
-                    ,Constants.FStore.Messages.userDisplayNameField: user.displayName ?? nil!
-                    ,Constants.FStore.Messages.bodyField: messageBody
-                    ,Constants.FStore.Messages.timestamp: Date()
-                ]) { (error) in
-                    if let e = error {
-                        print("There was an issue saving message to firestore, \(e)")
-                    } else {
-                        print("Sucessfully saved message")
-                        DispatchQueue.main.async {
-                            self.messageBody = ""
-                        }
-                    }
-                }
-            }
         }
     }
 }
