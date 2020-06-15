@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LandingView: View {
 
-    @EnvironmentObject var viewRouter: ViewRouter
+    var viewRouter = SceneDelegate.viewRouter
     
     var body: some View {
         NavigationView{

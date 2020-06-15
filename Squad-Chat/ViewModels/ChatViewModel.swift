@@ -9,7 +9,6 @@
 import Foundation
 import Firebase
 
-
 class ChatViewModel: ObservableObject {
     
     @Published var messages = [Message]()

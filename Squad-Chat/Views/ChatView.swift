@@ -7,17 +7,8 @@
 //
 
 import SwiftUI
-import Firebase
 
 struct ChatView: View {
-    
-    @EnvironmentObject var viewRouter: ViewRouter
-    
-    let currentAuth = Auth.auth().currentUser
-    
-    let db = Firestore.firestore()
-    
-    var listener: ListenerRegistration?
     
     @ObservedObject var chatViewModel = ChatViewModel()
     

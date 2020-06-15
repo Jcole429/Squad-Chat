@@ -11,7 +11,7 @@ import Firebase
 
 struct LoginView: View {
     
-    @EnvironmentObject var viewRouter: ViewRouter
+    var viewRouter = SceneDelegate.viewRouter
     
     @State var email = "TestUser1@email.com"
     @State var password = "Test123"
