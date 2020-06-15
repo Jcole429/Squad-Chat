@@ -60,4 +60,15 @@ class RegisterViewModel: ObservableObject {
         }
     }
     
+    func loginPressed() {
+        if email != "", password != "" {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                }
+            }
+        }
+    }
 }

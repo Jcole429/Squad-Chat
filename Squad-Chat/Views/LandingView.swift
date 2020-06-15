@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct LandingView: View {
-
-    var viewRouter = SceneDelegate.viewRouter
     
     var body: some View {
         NavigationView{
