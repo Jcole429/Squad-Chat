@@ -50,7 +50,7 @@ class RegisterController: ObservableObject {
                                 print("There was an issue saving message to firestore, \(e)")
                             } else {
                                 print("Successfully saved user")
-                                self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                                self.viewRouter.setPage(pageName: Constants.Pages.chatSelectPage)
                             }
                         }
                     }
@@ -66,7 +66,7 @@ class RegisterController: ObservableObject {
                 if let e = error {
                     print(e)
                 } else {
-                    self.viewRouter.setPage(pageName: Constants.Pages.homePage)
+                    self.viewRouter.setPage(pageName: Constants.Pages.chatSelectPage)
                 }
             }
         }

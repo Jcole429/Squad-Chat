@@ -37,6 +37,6 @@ struct MessageView: View {
 
 struct Message_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(message: Message(id: "1", userUid: "1", userEmail: "testuser@email.com", userDisplayName: "TestUser", body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")).previewLayout(.sizeThatFits)
+        MessageView(message: Message(id: "1", chatId: "1", userUid: "1", userEmail: "testuser@email.com", userDisplayName: "TestUser", body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus, nisi in egestas lobortis, eros sem sagittis justo, nec eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")).previewLayout(.sizeThatFits)
     }
 }

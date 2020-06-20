@@ -12,7 +12,7 @@ struct Constants {
     
     struct Pages{
         static let landingPage = "LandingPage"
-        static let homePage = "HomePage"
+        static let chatSelectPage = "ChatSelectPage"
     }
     
     static let normalTextField = "Normal"
@@ -21,11 +21,17 @@ struct Constants {
     struct FStore {
         struct Messages {
             static let collectionName = "messages"
+            static let chatIdField = "chatId"
             static let userUidField = "userUid"
             static let userEmailField = "userEmail"
             static let userDisplayNameField = "userDisplayName"
             static let bodyField = "body"
             static let timestamp = "timestamp"
+        }
+        
+        struct Chats {
+            static let collectionName = "chats"
+            static let memberIdsField = "memberIds"
         }
         
         struct Users {

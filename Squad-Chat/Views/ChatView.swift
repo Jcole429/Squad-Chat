@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ChatView: View {
     
+    var chatId: String
+    
     @ObservedObject var chatController = ChatController()
     
     var body: some View {
@@ -29,7 +31,7 @@ struct ChatView: View {
                         TextField("Message", text: $chatController.newMessageText)
                             .lineLimit(nil)
                         Button(action: {
-                            print("Button pressed")
+                            print("Send chat button pressed")
                             self.chatController.sendPressed()
                         }, label: {
                             Image(systemName: "paperplane")
@@ -41,14 +43,14 @@ struct ChatView: View {
         }
         .padding(.horizontal)
         .onAppear{
+            self.chatController.chatId = self.chatId
             self.chatController.fetchMessages()
-            
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView(chatId:"1")
     }
 }

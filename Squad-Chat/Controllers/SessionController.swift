@@ -9,9 +9,13 @@
 import Foundation
 import Firebase
 
-class Session {
+class SessionController {
     
-    var currentUser: User?
+    @Published var currentUser: User?
+    
+    init() {
+        getUserAuth()
+    }
     
     func getUserAuth() {
         let currentAuth = Auth.auth().currentUser

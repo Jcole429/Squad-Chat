@@ -11,15 +11,21 @@ import Firebase
 
 class ChatController: ObservableObject {
     
+    var chatId: String?
+    
     @Published var messages = [Message]()
     @Published var newMessageText = ""
     
     let db = Firestore.firestore()
-    var listener: ListenerRegistration?
+    var messagesListener: ListenerRegistration?
+    
+    var viewRouter = SceneDelegate.viewRouter
+    
     
     func fetchMessages() {
-        listener = db.collection(Constants.FStore.Messages.collectionName)
+        messagesListener = db.collection(Constants.FStore.Messages.collectionName)
             .order(by: Constants.FStore.Messages.timestamp)
+            .whereField(Constants.FStore.Messages.chatIdField, isEqualTo: chatId!)
             .addSnapshotListener { (querySnapshot, error) in
                 if let e = error {
                     print("Thre was an issue retrieving data from the Firestore. \(e)")
@@ -27,14 +33,16 @@ class ChatController: ObservableObject {
                     if let snapshotDocuments = querySnapshot?.documents {
                         
                         self.messages = []
+                        print(self.messages)
                         
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let userUid = data[Constants.FStore.Messages.userUidField] as! String?
+                            if let chatId = data[Constants.FStore.Messages.chatIdField] as! String?
+                                ,let userUid = data[Constants.FStore.Messages.userUidField] as! String?
                                 ,let userEmail = data[Constants.FStore.Messages.userEmailField] as! String?
                                 ,let userDisplayName = data[Constants.FStore.Messages.userDisplayNameField] as! String?
                                 ,let messageBody = data[Constants.FStore.Messages.bodyField] as? String {
-                                let newMessage = Message(id: doc.documentID, userUid: userUid, userEmail: userEmail, userDisplayName: userDisplayName, body: messageBody)
+                                let newMessage = Message(id: doc.documentID, chatId: chatId, userUid: userUid, userEmail: userEmail, userDisplayName: userDisplayName, body: messageBody)
                                 
                                 DispatchQueue.main.async {
                                     self.messages.append(newMessage)
@@ -56,7 +64,8 @@ class ChatController: ObservableObject {
                 
                 
                 db.collection(Constants.FStore.Messages.collectionName).addDocument(data: [
-                    Constants.FStore.Messages.userUidField: user.uid
+                    Constants.FStore.Messages.chatIdField: self.chatId!
+                    ,Constants.FStore.Messages.userUidField: user.uid
                     ,Constants.FStore.Messages.userEmailField: user.email
                     ,Constants.FStore.Messages.userDisplayNameField: user.displayName ?? nil!
                     ,Constants.FStore.Messages.bodyField: newMessageText

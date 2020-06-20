@@ -10,6 +10,7 @@ import Foundation
 
 struct Message: Identifiable {
     let id: String
+    let chatId: String
     let userUid: String
     let userEmail: String
     let userDisplayName:String

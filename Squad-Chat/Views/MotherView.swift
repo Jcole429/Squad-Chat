@@ -16,8 +16,8 @@ struct MotherView: View {
         VStack{
             if viewRouter.currentPage == Constants.Pages.landingPage {
                 LandingView()
-            } else if viewRouter.currentPage == Constants.Pages.homePage {
-                ChatView()
+            } else if viewRouter.currentPage == Constants.Pages.chatSelectPage {
+                ChatSelectView()
             }
         }
     }
