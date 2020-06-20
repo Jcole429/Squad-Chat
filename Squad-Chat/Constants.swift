@@ -31,6 +31,7 @@ struct Constants {
         
         struct Chats {
             static let collectionName = "chats"
+            static let chatNameField = "chatName"
             static let memberIdsField = "memberIds"
         }
         

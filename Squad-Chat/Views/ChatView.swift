@@ -10,10 +10,10 @@ import SwiftUI
 
 struct ChatView: View {
     
-    var chatId: String
+    var chat: Chat
     
     @ObservedObject var chatController = ChatController()
-    
+
     var body: some View {
         VStack {
             ReverseScrollView {
@@ -42,15 +42,20 @@ struct ChatView: View {
             )
         }
         .padding(.horizontal)
-        .onAppear{
-            self.chatController.chatId = self.chatId
+        .onAppear() {
+            print("\(self.chat.chatName) appeared")
+            self.chatController.chat = self.chat
             self.chatController.fetchMessages()
+        }
+        .onDisappear() {
+            print("\(self.chat.chatName) dissapeared")
+            self.chatController.chatClosed()
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(chatId:"1")
+        ChatView(chat: Chat(id: "1", chatName: "Chat 1", memberIds: ["1"]))
     }
 }

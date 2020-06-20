@@ -12,6 +12,7 @@ import Foundation
 
 struct Chat: Identifiable {
     let id: String
+    let chatName: String
     let memberIds: [String]
     
 }

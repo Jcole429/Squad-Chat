@@ -15,6 +15,7 @@ struct CreateChatView: View {
     var body: some View {
         VStack {
             Text("Create Chats")
+            TextField("Name", text: $chatSelectController.newChatName)
             Button(action: self.chatSelectController.createNewChat) {
                 Text("Create first chat")
             }

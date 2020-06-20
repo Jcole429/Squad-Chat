@@ -20,8 +20,8 @@ struct ChatSelectView: View {
                 List {
                     ForEach(self.chatSelectController.chats) {chat in
                         
-                        return NavigationLink(destination: ChatView(chatId: chat.id)) {
-                            Text(chat.id)
+                        return NavigationLink(destination: ChatView(chat: chat)) {
+                            Text(chat.chatName)
                         }
                     }
                 }

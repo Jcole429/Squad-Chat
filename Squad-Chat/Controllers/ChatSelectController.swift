@@ -14,6 +14,7 @@ import Firebase
 class ChatSelectController: ObservableObject {
     
     @Published var chats = [Chat]()
+    @Published var newChatName = ""
     
     var viewRouter = SceneDelegate.viewRouter
     var session = SessionController()
@@ -24,6 +25,7 @@ class ChatSelectController: ObservableObject {
     
     func fetchChats() {
         chatListener = db.collection(Constants.FStore.Chats.collectionName)
+            .order(by: Constants.FStore.Chats.chatNameField)
             .addSnapshotListener({ (querySnapshot, error) in
                 if let e = error {
                     print("Thre was an issue retrieving chats from the Firestore. \(e)")
@@ -33,8 +35,8 @@ class ChatSelectController: ObservableObject {
                         
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let memberIds = data[Constants.FStore.Chats.memberIdsField] as! [String]? {
-                                let newChat = Chat(id: doc.documentID, memberIds: memberIds)
+                            if let safeChatName = data[Constants.FStore.Chats.chatNameField] as! String?, let memberIds = data[Constants.FStore.Chats.memberIdsField] as! [String]? {
+                                let newChat = Chat(id: doc.documentID, chatName: safeChatName, memberIds: memberIds)
                                 if let safeUid = self.session.currentUser?.uid {
                                     if newChat.memberIds.contains(safeUid) {
                                         DispatchQueue.main.async {
@@ -43,7 +45,7 @@ class ChatSelectController: ObservableObject {
                                     }
                                 }
                             } else {
-                                print("Count not parse chat data")
+                                print("Could not parse chat data")
                             }
                         }
                     }
@@ -52,18 +54,19 @@ class ChatSelectController: ObservableObject {
     }
     
     func createNewChat() {
+        self.objectWillChange.send()
         if let currentUserAuth = Auth.auth().currentUser {
             let user = User(uid: currentUserAuth.uid, email: currentUserAuth.email!, displayName: currentUserAuth.displayName)
             db.collection(Constants.FStore.Chats.collectionName).addDocument(data: [
-                Constants.FStore.Chats.memberIdsField: [user.uid]
+                Constants.FStore.Chats.chatNameField: self.newChatName
+                ,Constants.FStore.Chats.memberIdsField: [user.uid]
             ]) { (error) in
                 if let e = error {
                     print("There was an issue saving chat to firestore, \(e)")
                 } else {
                     print("Sucessfully saved chat")
-                    DispatchQueue.main.async {
-                        self.viewRouter.setPage(pageName: Constants.Pages.chatSelectPage)
-                    }
+                    self.objectWillChange.send()
+                    self.fetchChats()
                 }
             }
         }

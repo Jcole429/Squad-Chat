@@ -11,7 +11,7 @@ import Firebase
 
 class ChatController: ObservableObject {
     
-    var chatId: String?
+    var chat: Chat?
     
     @Published var messages = [Message]()
     @Published var newMessageText = ""
@@ -25,7 +25,7 @@ class ChatController: ObservableObject {
     func fetchMessages() {
         messagesListener = db.collection(Constants.FStore.Messages.collectionName)
             .order(by: Constants.FStore.Messages.timestamp)
-            .whereField(Constants.FStore.Messages.chatIdField, isEqualTo: chatId!)
+            .whereField(Constants.FStore.Messages.chatIdField, isEqualTo: chat?.id as Any)
             .addSnapshotListener { (querySnapshot, error) in
                 if let e = error {
                     print("Thre was an issue retrieving data from the Firestore. \(e)")
@@ -33,7 +33,7 @@ class ChatController: ObservableObject {
                     if let snapshotDocuments = querySnapshot?.documents {
                         
                         self.messages = []
-                        print(self.messages)
+                        print("Fetching messages for: \(self.chat?.id ?? "")")
                         
                         for doc in snapshotDocuments {
                             let data = doc.data()
@@ -64,7 +64,7 @@ class ChatController: ObservableObject {
                 
                 
                 db.collection(Constants.FStore.Messages.collectionName).addDocument(data: [
-                    Constants.FStore.Messages.chatIdField: self.chatId!
+                    Constants.FStore.Messages.chatIdField: self.chat?.id as Any
                     ,Constants.FStore.Messages.userUidField: user.uid
                     ,Constants.FStore.Messages.userEmailField: user.email
                     ,Constants.FStore.Messages.userDisplayNameField: user.displayName ?? nil!
@@ -82,5 +82,9 @@ class ChatController: ObservableObject {
                 }
             }
         }
+    }
+    
+    func chatClosed() {
+        messagesListener?.remove()
     }
 }
