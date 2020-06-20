@@ -52,12 +52,3 @@ struct HomeView_Previews: PreviewProvider {
         ChatView()
     }
 }
-
-struct ListItem: View {
-    
-    let text: String
-    
-    var body: some View {
-        Text(text)
-    }
-}
