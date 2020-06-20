@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import SwiftUI
 
-class RegisterViewModel: ObservableObject {
+class RegisterController: ObservableObject {
     
     var viewRouter = SceneDelegate.viewRouter
     

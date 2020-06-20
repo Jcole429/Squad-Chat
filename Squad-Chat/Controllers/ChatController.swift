@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class ChatViewModel: ObservableObject {
+class ChatController: ObservableObject {
     
     @Published var messages = [Message]()
     @Published var newMessageText = ""

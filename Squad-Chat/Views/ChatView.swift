@@ -10,13 +10,13 @@ import SwiftUI
 
 struct ChatView: View {
     
-    @ObservedObject var chatViewModel = ChatViewModel()
+    @ObservedObject var chatController = ChatController()
     
     var body: some View {
         VStack {
             ReverseScrollView {
                 VStack(spacing: 0) {
-                    ForEach(self.chatViewModel.messages) { message in
+                    ForEach(self.chatController.messages) { message in
                         return MessageView(message: message)
                     }
                 }
@@ -26,11 +26,11 @@ struct ChatView: View {
                 .frame(height:40)
                 .overlay(
                     HStack {
-                        TextField("Message", text: $chatViewModel.newMessageText)
+                        TextField("Message", text: $chatController.newMessageText)
                             .lineLimit(nil)
                         Button(action: {
                             print("Button pressed")
-                            self.chatViewModel.sendPressed()
+                            self.chatController.sendPressed()
                         }, label: {
                             Image(systemName: "paperplane")
                                 .frame(width:40, height: 40)
@@ -41,7 +41,7 @@ struct ChatView: View {
         }
         .padding(.horizontal)
         .onAppear{
-            self.chatViewModel.fetchMessages()
+            self.chatController.fetchMessages()
             
         }
     }

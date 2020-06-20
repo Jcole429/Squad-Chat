@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RegisterView: View {
 
-    @ObservedObject var registerViewModel = RegisterViewModel()
+    @ObservedObject var registerController = RegisterController()
     
     var body: some View {
         ZStack {
@@ -22,11 +22,11 @@ struct RegisterView: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Username", value: self.$registerViewModel.username, type: Constants.normalTextField)
-                TextField1(label: "Email", value: self.$registerViewModel.email, type: Constants.normalTextField)
-                TextField1(label: "Password", value: self.$registerViewModel.password, type: Constants.secureTextField)
+                TextField1(label: "Username", value: self.$registerController.username, type: Constants.normalTextField)
+                TextField1(label: "Email", value: self.$registerController.email, type: Constants.normalTextField)
+                TextField1(label: "Password", value: self.$registerController.password, type: Constants.secureTextField)
                 ActionButton(label: "Create Account") {
-                    self.registerViewModel.createAccountPressed()
+                    self.registerController.createAccountPressed()
                 }
                 Spacer()
             }.padding(.horizontal)

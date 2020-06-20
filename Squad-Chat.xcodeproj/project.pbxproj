@@ -26,12 +26,12 @@
 		B42A0380247C64430007E0DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B42A037F247C64430007E0DF /* GoogleService-Info.plist */; };
 		B42A0382247C67300007E0DF /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0381247C67300007E0DF /* MessageView.swift */; };
 		B42A0384247C81480007E0DF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0383247C81480007E0DF /* Message.swift */; };
-		B42A0387247C84640007E0DF /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0386247C84640007E0DF /* ChatViewModel.swift */; };
+		B42A0387247C84640007E0DF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0386247C84640007E0DF /* ChatController.swift */; };
 		B42A0389247CB1CF0007E0DF /* ReverseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A0388247CB1CF0007E0DF /* ReverseScrollView.swift */; };
 		B42A038B247CBC440007E0DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038A247CBC440007E0DF /* User.swift */; };
 		B42A038D247CC7B80007E0DF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038C247CC7B80007E0DF /* Helper.swift */; };
 		B42A038F247E1BB20007E0DF /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A038E247E1BB20007E0DF /* Session.swift */; };
-		B4B461262496E9F700C7F411 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B461252496E9F700C7F411 /* RegisterViewModel.swift */; };
+		B4B461262496E9F700C7F411 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B461252496E9F700C7F411 /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,12 +57,12 @@
 		B42A037F247C64430007E0DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B42A0381247C67300007E0DF /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B42A0383247C81480007E0DF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		B42A0386247C84640007E0DF /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		B42A0386247C84640007E0DF /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		B42A0388247CB1CF0007E0DF /* ReverseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseScrollView.swift; sourceTree = "<group>"; };
 		B42A038A247CBC440007E0DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B42A038C247CC7B80007E0DF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B42A038E247E1BB20007E0DF /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		B4B461252496E9F700C7F411 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B4B461252496E9F700C7F411 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		C166F6485FC4BD8F0F076AB6 /* Pods-Squad-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Squad-Chat/Pods-Squad-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				B42A037D247C3E990007E0DF /* ViewRouter.swift */,
-				B42A0386247C84640007E0DF /* ChatViewModel.swift */,
-				B4B461252496E9F700C7F411 /* RegisterViewModel.swift */,
+				B42A0386247C84640007E0DF /* ChatController.swift */,
+				B4B461252496E9F700C7F411 /* RegisterController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,9 +310,9 @@
 				B42A0327247AD2E90007E0DF /* AppDelegate.swift in Sources */,
 				B42A0348247B308E0007E0DF /* Constants.swift in Sources */,
 				B42A038B247CBC440007E0DF /* User.swift in Sources */,
-				B42A0387247C84640007E0DF /* ChatViewModel.swift in Sources */,
+				B42A0387247C84640007E0DF /* ChatController.swift in Sources */,
 				B42A0389247CB1CF0007E0DF /* ReverseScrollView.swift in Sources */,
-				B4B461262496E9F700C7F411 /* RegisterViewModel.swift in Sources */,
+				B4B461262496E9F700C7F411 /* RegisterController.swift in Sources */,
 				B42A038F247E1BB20007E0DF /* Session.swift in Sources */,
 				B42A037B247C3A230007E0DF /* MotherView.swift in Sources */,
 				B42A034B247B52C60007E0DF /* NavigationButton.swift in Sources */,

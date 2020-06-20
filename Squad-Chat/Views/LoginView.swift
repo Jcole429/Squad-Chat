@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @ObservedObject var registerViewModel = RegisterViewModel()
+    @ObservedObject var registerController = RegisterController()
     
     var body: some View {
         ZStack {
@@ -22,10 +22,10 @@ struct LoginView: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Email:",value: $registerViewModel.email, type: Constants.normalTextField)
-                TextField1(label: "Password:",value: $registerViewModel.password, type: Constants.secureTextField)
+                TextField1(label: "Email:",value: $registerController.email, type: Constants.normalTextField)
+                TextField1(label: "Password:",value: $registerController.password, type: Constants.secureTextField)
                 ActionButton(label: "Login") {
-                    self.registerViewModel.loginPressed()
+                    self.registerController.loginPressed()
                 }
                 Spacer()
             }.padding(.horizontal)
