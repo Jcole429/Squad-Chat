@@ -22,8 +22,8 @@ struct LoginView: View {
                     .font(.subheadline)
                     .bold()
                 Spacer()
-                TextField1(label: "Email:",value: $registerController.email, type: Constants.normalTextField)
-                TextField1(label: "Password:",value: $registerController.password, type: Constants.secureTextField)
+                TextField1(label: "Email",value: $registerController.email, type: Constants.normalTextField)
+                TextField1(label: "Password",value: $registerController.password, type: Constants.secureTextField)
                 ActionButton(label: "Login") {
                     self.registerController.loginPressed()
                 }
